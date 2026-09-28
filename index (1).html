@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zameen Pro – Rent & Buy Property in Pakistan</title>
+<style>
+:root{--bg:#f1f4f2;--card:#fff;--tx:#14201b;--mu:#5d6b64;--br:#0f5c43;--brd:#0a3d2d;--gold:#b8893b;--bd:#dde3df;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1512;--card:#16201b;--tx:#edf2ef;--mu:#9aa9a1;--br:#2f9e74;--brd:#0a3d2d;--bd:#26332c}}
+:root[data-theme="dark"]{--bg:#0e1512;--card:#16201b;--tx:#edf2ef;--mu:#9aa9a1;--br:#2f9e74;--brd:#0a3d2d;--bd:#26332c}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3,.logo{font-family:Georgia,"Times New Roman",serif;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+header{background:var(--brd);color:#fff}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-size:22px;font-weight:700}.logo b{color:#e0b565}
+.nav small{opacity:.8}
+.hero{padding:36px 0 64px}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.1;max-width:14em}
+.hero p{max-width:34em;opacity:.85;margin:14px 0 0}
+.panel{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin-top:-40px;position:relative;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.tabs{display:flex;gap:6px;margin-bottom:12px}
+.tabs button{flex:1;padding:10px;border:1px solid var(--bd);background:transparent;color:var(--tx);border-radius:8px;font:inherit;font-weight:600;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--br);border-color:var(--br);color:var(--on)}
+.grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+label{font-size:13px;color:var(--mu);display:block;margin-bottom:4px}
+select,input{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bar{display:flex;justify-content:space-between;align-items:center;margin:28px 0 14px;gap:10px;flex-wrap:wrap}
+.bar h2{font-size:24px}.bar select{width:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;padding-bottom:48px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer;text-align:left;padding:0;color:inherit;font:inherit;transition:transform .15s}
+.card:hover{transform:translateY(-3px)}
+.art{position:relative;aspect-ratio:16/10;background:#ccc}.art svg{width:100%;height:100%;display:block}
+.tag{position:absolute;top:10px;left:10px;background:var(--brd);color:#fff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px}
+.tag.s{background:var(--gold)}
+.cb{padding:14px}.price{font-family:Georgia,serif;font-size:20px;font-weight:700;color:var(--br)}
+.cb h3{font-size:16px;font-family:system-ui,sans-serif;margin:4px 0 2px}.meta{color:var(--mu);font-size:14px}
+.specs{display:flex;gap:14px;margin-top:10px;font-size:14px;border-top:1px solid var(--bd);padding-top:10px}
+.empty{grid-column:1/-1;text-align:center;padding:48px 16px;color:var(--mu);border:1px dashed var(--bd);border-radius:12px}
+.empty button,.btn{background:var(--br);color:var(--on);border:0;padding:11px 20px;border-radius:8px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+dialog{border:0;border-radius:14px;padding:0;max-width:640px;width:calc(100% - 24px);background:var(--card);color:var(--tx)}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+.dc{padding:20px}.dc h2{font-size:24px}.close{position:absolute;top:10px;right:10px;background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:99px;width:36px;height:36px;font-size:18px;cursor:pointer;z-index:2}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin:16px 0}
+.facts div{background:var(--bg);border-radius:8px;padding:10px}.facts b{display:block}
+footer{text-align:center;color:var(--mu);font-size:14px;padding:28px 16px;border-top:1px solid var(--bd)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="nav"><span class="logo">Zameen<b>Pro</b></span><small>Karachi · Lahore · Islamabad</small></div>
+  <div class="hero"><h1>Houses, flats and penthouses. Rent or buy.</h1><p>Filter by price, bedrooms and city, and find a property that fits in minutes.</p></div>
+</div></header>
+
+<main class="wrap">
+  <section class="panel" aria-label="Search filters">
+    <div class="tabs" role="group" aria-label="Listing type">
+      <button data-t="" aria-pressed="true">All</button><button data-t="Rent" aria-pressed="false">Rent</button><button data-t="Sell" aria-pressed="false">Buy</button>
+    </div>
+    <div class="grid5">
+      <div><label for="cat">Category</label><select id="cat"><option value="">All categories</option></select></div>
+      <div><label for="city">City</label><select id="city"><option value="">All cities</option></select></div>
+      <div><label for="beds">Bedrooms</label><select id="beds"><option value="">Any</option><option>1</option><option>2</option><option>3</option><option value="4">4+</option></select></div>
+      <div><label for="min">Min price (PKR)</label><input id="min" type="number" min="0" placeholder="0"></div>
+      <div><label for="max">Max price (PKR)</label><input id="max" type="number" min="0" placeholder="Any"></div>
+    </div>
+  </section>
+
+  <div class="bar"><h2 id="count"></h2>
+    <select id="sort" aria-label="Sort"><option value="">Featured</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select>
+  </div>
+  <div class="cards" id="cards"></div>
+</main>
+
+<footer>© 2026 Zameen Pro · MVP demo with sample listings</footer>
+
+<dialog id="dlg"><button class="close" aria-label="Close" onclick="dlg.close()">✕</button><div id="dbody"></div></dialog>
+
+<script>
+// id, title, type, category, city, price, beds, baths, area, description
+const D=[
+[1,"Modern 3-Bed Flat, DHA Phase 6","Rent","Flat","Karachi",120000,3,3,"1,800 sqft","Bright flat with open living areas, a fitted kitchen and covered parking in a secure building."],
+[2,"Cozy 2-Bed Apartment, Clifton","Rent","Flat","Karachi",95000,2,2,"1,200 sqft","Near the beach with restaurants, schools and pharmacies within walking distance."],
+[3,"Luxury Bungalow, DHA Phase 8","Sell","Bungalow","Karachi",45000000,5,6,"1 Kanal","Marble finishes, private lawn, double-height lounge and a separate servant quarter."],
+[4,"Elegant House, Gulberg III","Sell","House","Lahore",32000000,4,5,"10 Marla","Central family home with a large drawing room, mature garden and two-car porch."],
+[5,"Penthouse with City View, Emporium Area","Sell","Penthouse","Lahore",65000000,4,5,"4,500 sqft","Top-floor penthouse with skyline views and a private rooftop terrace."],
+[6,"Family House, Johar Town","Rent","House","Lahore",150000,4,4,"10 Marla","Well-kept house close to markets and schools. Ideal for families."],
+[7,"Compact 1-Bed Flat, Bahria Town","Rent","Flat","Islamabad",55000,1,1,"650 sqft","Efficient starter flat inside a gated community with 24/7 security."],
+[8,"Spacious Bungalow, F-7","Sell","Bungalow","Islamabad",90000000,6,7,"2 Kanal","One of the capital's best addresses, with mature trees and a guest wing."],
+[9,"Modern House, G-13","Sell","House","Islamabad",28000000,3,4,"8 Marla","Contemporary build with an open-plan kitchen and rooftop seating."],
+[10,"3-Bed Flat, E-11","Rent","Flat","Islamabad",110000,3,3,"1,600 sqft","Lift-serviced building close to the Margalla foothills."],
+[11,"Penthouse Suite, Seaview","Rent","Penthouse","Karachi",280000,4,4,"3,800 sqft","Furnished penthouse with open sea views and a private lift lobby."],
+[12,"2-Bed House, North Nazimabad","Sell","House","Karachi",18000000,2,2,"5 Marla","An affordable entry into an established residential neighbourhood."],
+[13,"Elegant Bungalow, Model Town","Sell","Bungalow","Lahore",55000000,5,6,"1 Kanal","Classic architecture and a wide front lawn in one of Lahore's greenest areas."],
+[14,"2-Bed Flat, Township","Rent","Flat","Lahore",60000,2,2,"950 sqft","Simple, functional flat close to public transport."],
+[15,"3-Bed House, Cavalry Ground","Rent","House","Lahore",175000,3,4,"10 Marla","Quiet cantonment house with a private driveway and garden."],
+[16,"Grand Bungalow, DHA Phase 5","Sell","Bungalow","Karachi",70000000,6,7,"1.5 Kanal","Custom-built residence with a swimming pool and home theatre."],
+[17,"Studio-Style 1-Bed Flat, Saddar","Rent","Flat","Karachi",40000,1,1,"500 sqft","Compact city-centre flat, suited to students and young professionals."],
+[18,"Premium Penthouse, Centaurus Area","Sell","Penthouse","Islamabad",110000000,5,6,"5,200 sqft","Ultra-luxury penthouse near the capital's main shopping district."],
+[19,"Family House, Wapda Town","Sell","House","Lahore",24000000,3,3,"7 Marla","Well-kept home in a family-friendly society with nearby parks."],
+[20,"4-Bed House with Garden, F-10","Rent","House","Islamabad",220000,4,5,"1 Kanal","Large private garden in a quiet, leafy sector."]
+].map(a=>({id:a[0],title:a[1],type:a[2],cat:a[3],city:a[4],price:a[5],beds:a[6],baths:a[7],area:a[8],desc:a[9]}));
+
+const $=id=>document.getElementById(id);
+const st={t:""};
+[...new Set(D.map(x=>x.cat))].forEach(c=>$("cat").add(new Option(c,c)));
+[...new Set(D.map(x=>x.city))].forEach(c=>$("city").add(new Option(c,c)));
+
+function money(l){
+  if(l.type==="Rent")return "PKR "+l.price.toLocaleString("en-US")+"/mo";
+  const p=l.price;return p>=1e7?"PKR "+(p/1e7).toFixed(p%1e7?2:0).replace(/\.?0+$/,"")+" crore":"PKR "+(p/1e5)+" lakh";
+}
+function art(l){
+  const h=(l.id*47)%360,c={House:"M20 80V45l30-22 30 22v35z",Flat:"M28 82V20h44v62zM36 30h8v8h-8zM56 30h8v8h-8zM36 48h8v8h-8zM56 48h8v8h-8z",Penthouse:"M18 82V50h64v32zM30 50V32h40v18zM44 32V22h12v10z",Bungalow:"M10 80V52l40-24 40 24v28zM40 80V62h20v18z"}[l.cat];
+  return `<svg viewBox="0 0 100 62" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="g${l.id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(${h},35%,72%)"/><stop offset="1" stop-color="hsl(${(h+40)%360},40%,38%)"/></linearGradient></defs><rect width="100" height="62" fill="url(#g${l.id})"/><g transform="translate(0,-14) scale(1,.9)"><path d="${c}" fill="rgba(255,255,255,.88)"/></g></svg>`;
+}
+function view(){
+  const cat=$("cat").value,city=$("city").value,beds=$("beds").value,mn=+$("min").value||0,mx=+$("max").value||Infinity;
+  let r=D.filter(l=>(!st.t||l.type===st.t)&&(!cat||l.cat===cat)&&(!city||l.city===city)&&l.price>=mn&&l.price<=mx&&(!beds||(beds==="4"?l.beds>=4:l.beds===+beds)));
+  const s=$("sort").value;if(s)r.sort((a,b)=>s==="lo"?a.price-b.price:b.price-a.price);
+  $("count").textContent=r.length+(r.length===1?" property":" properties");
+  $("cards").innerHTML=r.length?r.map(l=>`<button class="card" data-id="${l.id}"><div class="art">${art(l)}<span class="tag ${l.type==="Sell"?"s":""}">${l.type==="Rent"?"For rent":"For sale"}</span></div><div class="cb"><div class="price">${money(l)}</div><h3>${l.title}</h3><div class="meta">${l.city} · ${l.cat}</div><div class="specs"><span>${l.beds} beds</span><span>${l.baths} baths</span><span>${l.area}</span></div></div></button>`).join(""):`<div class="empty"><p>No properties match these filters. Widen the price range or clear a filter.</p><button onclick="reset()">Clear filters</button></div>`;
+}
+function reset(){st.t="";["cat","city","beds","min","max","sort"].forEach(i=>$(i).value="");tabs();view()}
+function tabs(){document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.t===st.t))}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{st.t=b.dataset.t;tabs();view()});
+["cat","city","beds","min","max","sort"].forEach(i=>$(i).addEventListener("input",view));
+$("cards").onclick=e=>{const c=e.target.closest(".card");if(!c)return;const l=D.find(x=>x.id==c.dataset.id);
+  $("dbody").innerHTML=`<div class="art">${art(l)}<span class="tag ${l.type==="Sell"?"s":""}">${l.type==="Rent"?"For rent":"For sale"}</span></div><div class="dc"><div class="price" style="font-size:24px">${money(l)}</div><h2>${l.title}</h2><div class="meta">${l.city} · ${l.cat}</div><div class="facts"><div><b>${l.beds}</b>Bedrooms</div><div><b>${l.baths}</b>Bathrooms</div><div><b>${l.area}</b>Area</div></div><p>${l.desc}</p><a class="btn" href="mailto:contact@zameenpro.com?subject=${encodeURIComponent("Inquiry: "+l.title)}">Contact agent</a></div>`;
+  $("dlg").showModal()};
+$("dlg").addEventListener("click",e=>{if(e.target===$("dlg"))$("dlg").close()});
+view();
+</script>
+</body>
+</html>
